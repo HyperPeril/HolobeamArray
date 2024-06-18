@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Olympian Holobeam Array</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body>
+    <header class="header-bg">
+        <div class="header-content">
+            <h1>The Olympian Holobeam Array</h1>
+            <p>The Future of Energy</p>
+        </div>
+    </header>
+    <div class="container">
+        <section class="intro" data-aos="fade-up">
+            <h2 id="typed-container"><span id="typed"></span></h2>
+            <p>
+                The Olympian Holobeam Array was built to evaluate the Holographic Principle and study the nature of space and time. We are searching for evidence that our three-dimensional universe is a holographic reflection of the two-dimensional surface reality of the cosmological horizon. We are seeking to expand the boundary of physics and humanity's knowledge of the cosmos.
+            </p>
+            <hr>
+        </section>
+        <nav class="menu-bar" data-aos="fade-down">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Research</a></li>
+                <li><a href="">Publications</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="scientists" data-aos="fade-up">
+            <div class="scientist" data-aos="zoom-in">
+                <img src="portraits/campbell.jpg" alt="Jamie Campbell, Ph.D" onclick="showImage('portraits/campbell.jpg')">
+                <h3>Jamie Campbell, Ph.D</h3>
+                <p>Director</p>
+            </div>
+            <div class="scientist" data-aos="zoom-in">
+                <img src="portraits/klinger.jpg" alt="Helen Klinger, Ph.D" onclick="showImage('portraits/klinger.jpg')">
+                <h3>Helen Klinger, Ph.D</h3>
+                <p>Researcher</p>
+            </div>
+            <div class="scientist" data-aos="zoom-in">
+                <img src="portraits/black.jpg" alt="Philip Black, Ph.D" onclick="showImage('portraits/black.jpg')">
+                <h3>Philip Black, Ph.D</h3>
+                <p>Researcher</p>
+            </div>
+            <div class="scientist" data-aos="zoom-in">
+                <img src="portraits/takagawa.jpg" alt="Ishi Takagawa, Ph.D" onclick="showImage('portraits/takagawa.jpg')">
+                <h3>Ishi Takagawa, Ph.D</h3>
+                <p>Senior Engineer</p>
+            </div>
+            <div class="scientist" data-aos="zoom-in">
+                <img src="portraits/kozak.jpg" alt="Evan Kozak" onclick="showImage('portraits/kozak.jpg')">
+                <h3>Evan Kozak</h3>
+                <p>Junior Engineer</p>
+            </div>
+            <div class="scientist" data-aos="zoom-in">
+                <img src="portraits/tsang.jpg" alt="Jingfei Tsang" onclick="showImage('portraits/tsang.jpg')">
+                <h3>Jingfei Tsang</h3>
+                <p>Information Technology</p>
+            </div>
+            <hr>
+        </section>
+        <section class="publications" data-aos="fade-up">
+            <h2>Our Publications</h2>
+            <p>
+                Explore our latest research and publications. Visit our 
+                <a href="">publications page</a> for more information.
+            </p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 OLYMPIAN ADVANCES INC. DOE DOD et al. All rights reserved.</p>
+    </footer>
+
+     <div class="overlay" id="overlay" onclick="closeImage()"></div>
+    <div class="image-popup" id="image-popup">
+        <span class="close-btn" onclick="closeImage()">&times;</span>
+        <img src="" alt="" id="popup-img">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var options = {
+                strings: ["Welcome to the Olympian Holobeam Array.", "Leading the Future of Energy."],
+                typeSpeed: 50,
+                backSpeed: 25,
+                loop: true
+            };
+
+            var typed = new Typed("#typed", options);
+            AOS.init({
+                duration: 1200,
+                once: true,
+                mirror: true,
+                offset: 200,
+                anchorPlacement: 'top-bottom',
+            });
+        });
+
+         function showImage(imageUrl) {
+            document.getElementById('popup-img').src = imageUrl;
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('image-popup').style.display = 'block';
+        }
+
+        function closeImage() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('image-popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
